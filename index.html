@@ -1,0 +1,2845 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Emergency Dentist UK | Same-Day Dental Care</title>
+  <meta name="description" content="Need urgent dental care? Find emergency dental treatment near you with Night & Day Emergency Dentist. Explore clinics and arrange an appointment.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.nightandday-emergencydentist.co.uk/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Night & Day Emergency Dentist">
+  <meta property="og:description" content="Emergency dental care when you need it. Find a clinic and explore treatment options.">
+  <meta property="og:url" content="https://www.nightandday-emergencydentist.co.uk/">
+  <meta name="theme-color" content="#18181B">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================
+       1. DESIGN TOKENS
+    ========================================= */
+
+    :root {
+      --primary: #18181B;
+      --primary-soft: #29292E;
+      --primary-light: #3A3A42;
+
+      --secondary: #E31B23;
+      --secondary-dark: #BD151C;
+      --secondary-light: #FFF0F0;
+
+      --white: #FFFFFF;
+      --background: #F8F8F9;
+      --surface: #FFFFFF;
+      --surface-dark: #222227;
+
+      --heading: #18181B;
+      --body: #484850;
+      --muted: #73737D;
+
+      --border: #E7E7EA;
+      --border-dark: #38383F;
+
+      --success: #18794E;
+      --success-light: #EAF7F0;
+
+      --font-heading: "Manrope", sans-serif;
+      --font-body: "DM Sans", sans-serif;
+
+      --container: 1200px;
+      --header-height: 82px;
+
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --radius-xl: 38px;
+
+      --shadow-soft: 0 12px 35px rgba(24, 24, 27, 0.06);
+      --shadow-card: 0 18px 55px rgba(24, 24, 27, 0.09);
+      --shadow-button: 0 9px 22px rgba(227, 27, 35, 0.2);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--body);
+      background: var(--white);
+      font-size: 17px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img,
+    svg {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible {
+      outline: 3px solid var(--secondary);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 48px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--secondary);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 5px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: var(--font-heading);
+      color: var(--heading);
+      line-height: 1.13;
+      letter-spacing: -0.045em;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: clamp(34px, 4.2vw, 54px);
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: clamp(22px, 2.4vw, 27px);
+      font-weight: 800;
+    }
+
+    p {
+      margin-top: 14px;
+    }
+
+    .section-heading p {
+      font-size: 18px;
+      max-width: 650px;
+      margin-top: 18px;
+    }
+
+    .text-red {
+      color: var(--secondary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      min-height: 54px;
+      padding: 14px 23px;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--secondary);
+      box-shadow: var(--shadow-button);
+    }
+
+    .btn-primary:hover {
+      background: var(--secondary-dark);
+    }
+
+    .btn-dark {
+      color: var(--white);
+      background: var(--primary);
+    }
+
+    .btn-dark:hover {
+      background: var(--primary-soft);
+    }
+
+    .btn-outline {
+      color: var(--primary);
+      border-color: #D4D4D8;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--secondary);
+      color: var(--secondary);
+    }
+
+    .btn svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    /* =========================================
+       2. HEADER AND LOGO
+    ========================================= */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, .96);
+      border-bottom: 1px solid rgba(24, 24, 27, .08);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      min-height: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 51px;
+      height: 51px;
+      flex-shrink: 0;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .brand-name {
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.055em;
+      white-space: nowrap;
+    }
+
+    .brand-name .amp {
+      color: var(--secondary);
+    }
+
+    .brand-descriptor {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 29px;
+    }
+
+    .main-nav a {
+      color: var(--primary);
+      font-size: 15px;
+      font-weight: 700;
+      transition: color .2s ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--secondary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-actions .btn {
+      min-height: 47px;
+      padding: 12px 17px;
+      font-size: 15px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: var(--white);
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .menu-toggle svg {
+      width: 23px;
+      height: 23px;
+      margin: auto;
+    }
+
+    /* =========================================
+       3. HERO
+    ========================================= */
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 88px 0 92px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(227, 27, 35, .10), transparent 28%),
+        linear-gradient(120deg, #FAFAFB 0%, #F5F5F6 55%, #FFF5F5 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 540px;
+      height: 540px;
+      right: -180px;
+      bottom: -300px;
+      border: 1px solid rgba(227, 27, 35, .14);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 55px rgba(227, 27, 35, .025),
+        0 0 0 110px rgba(227, 27, 35, .02);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .hero-content {
+      max-width: 670px;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border: 1px solid rgba(227, 27, 35, .17);
+      border-radius: 50px;
+      color: var(--secondary-dark);
+      background: rgba(255, 255, 255, .78);
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      background: var(--secondary);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(227, 27, 35, .11);
+    }
+
+    .hero h1 {
+      max-width: 690px;
+    }
+
+    .hero h1 span {
+      color: var(--secondary);
+    }
+
+    .hero-description {
+      max-width: 590px;
+      margin-top: 24px;
+      color: #55555E;
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 32px;
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .hero-note svg {
+      width: 19px;
+      height: 19px;
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--success);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 470px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-art {
+      position: relative;
+      width: min(100%, 475px);
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, #FFFFFF 0 42%, transparent 43%),
+        radial-gradient(circle, rgba(227, 27, 35, .12), rgba(227, 27, 35, .02) 65%, transparent 66%);
+    }
+
+    .hero-art::before,
+    .hero-art::after {
+      content: "";
+      position: absolute;
+      inset: 8%;
+      border: 1px solid rgba(227, 27, 35, .17);
+      border-radius: 50%;
+    }
+
+    .hero-art::after {
+      inset: 17%;
+      border-color: rgba(24, 24, 27, .10);
+    }
+
+    .hero-tooth {
+      position: relative;
+      z-index: 1;
+      width: 62%;
+      filter: drop-shadow(0 24px 22px rgba(24, 24, 27, .12));
+    }
+
+    .floating-label {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 15px 18px;
+      border: 1px solid rgba(24, 24, 27, .07);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .96);
+      box-shadow: var(--shadow-card);
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .floating-label svg {
+      width: 24px;
+      height: 24px;
+      color: var(--secondary);
+      flex-shrink: 0;
+    }
+
+    .floating-label.top {
+      top: 13%;
+      right: -2%;
+    }
+
+    .floating-label.bottom {
+      bottom: 13%;
+      left: -5%;
+    }
+
+    /* =========================================
+       4. TRUST STRIP
+    ========================================= */
+
+    .trust-strip {
+      background: var(--primary);
+      color: var(--white);
+      padding: 25px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      min-width: 0;
+    }
+
+    .trust-item svg {
+      width: 26px;
+      height: 26px;
+      color: #FF6268;
+      flex-shrink: 0;
+    }
+
+    .trust-item span {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    /* =========================================
+       5. EMERGENCY INTRO
+    ========================================= */
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 85px;
+      align-items: start;
+    }
+
+    .intro-aside {
+      position: relative;
+      padding: 38px;
+      border-radius: var(--radius-lg);
+      color: var(--white);
+      background: var(--primary);
+      overflow: hidden;
+    }
+
+    .intro-aside::after {
+      content: "+";
+      position: absolute;
+      right: 15px;
+      bottom: -85px;
+      color: rgba(255, 255, 255, .06);
+      font-family: var(--font-heading);
+      font-size: 260px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .intro-aside h3 {
+      position: relative;
+      z-index: 1;
+      color: var(--white);
+      font-size: 29px;
+    }
+
+    .intro-aside p {
+      position: relative;
+      z-index: 1;
+      color: #D0D0D5;
+      font-size: 17px;
+    }
+
+    .intro-aside .btn {
+      position: relative;
+      z-index: 1;
+      margin-top: 25px;
+    }
+
+    .intro-copy p {
+      font-size: 18px;
+    }
+
+    .intro-copy .btn {
+      margin-top: 26px;
+    }
+
+    /* =========================================
+       6. TREATMENTS
+    ========================================= */
+
+    .treatments {
+      background: var(--background);
+    }
+
+    .treatment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .treatment-item {
+      position: relative;
+      min-height: 260px;
+      padding: 29px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .treatment-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(227, 27, 35, .35);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .treatment-icon {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      color: var(--secondary);
+      background: var(--secondary-light);
+      margin-bottom: 25px;
+    }
+
+    .treatment-icon svg {
+      width: 29px;
+      height: 29px;
+    }
+
+    .treatment-item h3 {
+      font-size: 23px;
+    }
+
+    .treatment-item p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .treatment-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 19px;
+      color: var(--secondary);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .treatment-link svg {
+      width: 17px;
+      height: 17px;
+      transition: transform .2s ease;
+    }
+
+    .treatment-link:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* =========================================
+       7. PATIENT JOURNEY
+    ========================================= */
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      counter-reset: journey;
+    }
+
+    .journey-step {
+      position: relative;
+      padding-top: 25px;
+      border-top: 2px solid var(--border);
+      counter-increment: journey;
+    }
+
+    .journey-step::before {
+      content: "0" counter(journey);
+      display: block;
+      color: var(--secondary);
+      font-family: var(--font-heading);
+      font-size: 43px;
+      font-weight: 800;
+      letter-spacing: -.06em;
+      margin-bottom: 22px;
+    }
+
+    .journey-step h3 {
+      font-size: 23px;
+    }
+
+    .journey-step p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* =========================================
+       8. CLINIC FINDER
+    ========================================= */
+
+    .clinic-section {
+      background: var(--primary);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .clinic-section h2,
+    .clinic-section h3 {
+      color: var(--white);
+    }
+
+    .clinic-section .section-heading p {
+      color: #C9C9CF;
+    }
+
+    .clinic-section .eyebrow {
+      color: #FF6A70;
+    }
+
+    .clinic-finder {
+      padding: 30px;
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-lg);
+      background: #222227;
+    }
+
+    .clinic-search-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .clinic-search-wrap {
+      position: relative;
+      flex: 1;
+    }
+
+    .clinic-search-wrap svg {
+      position: absolute;
+      left: 17px;
+      top: 50%;
+      width: 21px;
+      height: 21px;
+      color: #777780;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .clinic-search {
+      width: 100%;
+      min-height: 55px;
+      padding: 12px 16px 12px 49px;
+      border: 1px solid #45454D;
+      border-radius: 9px;
+      color: var(--white);
+      background: #18181B;
+      font-size: 16px;
+    }
+
+    .clinic-search::placeholder {
+      color: #A1A1AA;
+    }
+
+    .clinic-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .clinic-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 55px;
+      padding: 13px 15px;
+      border: 1px solid #414149;
+      border-radius: 9px;
+      color: #F4F4F5;
+      background: rgba(255, 255, 255, .025);
+      font-size: 15px;
+      font-weight: 700;
+      transition: border-color .2s ease, background .2s ease;
+    }
+
+    .clinic-link:hover {
+      border-color: var(--secondary);
+      background: rgba(227, 27, 35, .12);
+    }
+
+    .clinic-link svg {
+      width: 18px;
+      height: 18px;
+      color: #FF6A70;
+      flex-shrink: 0;
+    }
+
+    .clinic-empty {
+      display: none;
+      padding: 20px 0;
+      color: #D4D4D8;
+      font-size: 16px;
+    }
+
+    .clinic-disclaimer {
+      margin-top: 23px;
+      color: #B7B7BF;
+      font-size: 14px;
+    }
+
+    /* =========================================
+       9. REASSURANCE
+    ========================================= */
+
+    .reassurance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .reassurance-visual {
+      position: relative;
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at 50% 50%, #FFFFFF 0 35%, transparent 36%),
+        linear-gradient(145deg, #FFF0F0, #F5F5F6);
+      overflow: hidden;
+    }
+
+    .reassurance-visual::before,
+    .reassurance-visual::after {
+      content: "";
+      position: absolute;
+      width: 310px;
+      height: 310px;
+      border: 1px solid rgba(227, 27, 35, .18);
+      border-radius: 50%;
+    }
+
+    .reassurance-visual::after {
+      width: 400px;
+      height: 400px;
+      border-color: rgba(24, 24, 27, .10);
+    }
+
+    .reassurance-visual svg {
+      position: relative;
+      z-index: 1;
+      width: 180px;
+      height: 180px;
+      color: var(--secondary);
+    }
+
+    .reassurance-list {
+      display: grid;
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .reassurance-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .reassurance-check {
+      width: 27px;
+      height: 27px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--success);
+      background: var(--success-light);
+      margin-top: 2px;
+    }
+
+    .reassurance-check svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .reassurance-item strong {
+      display: block;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .reassurance-item p {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* =========================================
+       10. CTA BAND
+    ========================================= */
+
+    .cta-band {
+      position: relative;
+      isolation: isolate;
+      padding: 76px 0;
+      color: var(--white);
+      background: var(--secondary);
+      overflow: hidden;
+    }
+
+    .cta-band::after {
+      content: "+";
+      position: absolute;
+      z-index: -1;
+      right: 5%;
+      top: -130px;
+      color: rgba(255, 255, 255, .10);
+      font-family: var(--font-heading);
+      font-size: 450px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+
+    .cta-inner h2 {
+      max-width: 720px;
+      color: var(--white);
+      font-size: clamp(34px, 4.5vw, 53px);
+    }
+
+    .cta-inner p {
+      max-width: 650px;
+      color: rgba(255, 255, 255, .88);
+      font-size: 18px;
+    }
+
+    .cta-inner .btn {
+      flex-shrink: 0;
+      color: var(--primary);
+      background: var(--white);
+      box-shadow: none;
+    }
+
+    .cta-inner .btn:hover {
+      background: #F4F4F5;
+    }
+
+    /* =========================================
+       11. FAQ
+    ========================================= */
+
+    .faq-section {
+      background: var(--background);
+    }
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 75px;
+      align-items: start;
+    }
+
+    .faq-intro {
+      position: sticky;
+      top: 120px;
+    }
+
+    .faq-intro p {
+      font-size: 18px;
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 0;
+      border: 0;
+      color: var(--primary);
+      background: transparent;
+      text-align: left;
+      font-family: var(--font-heading);
+      font-size: 19px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .faq-question svg {
+      width: 21px;
+      height: 21px;
+      flex-shrink: 0;
+      color: var(--secondary);
+      transition: transform .2s ease;
+    }
+
+    .faq-question[aria-expanded="true"] svg {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      display: none;
+      max-width: 700px;
+      padding: 0 40px 24px 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .faq-answer.is-open {
+      display: block;
+    }
+
+    /* =========================================
+       12. FOOTER
+    ========================================= */
+
+    .site-footer {
+      padding: 75px 0 25px;
+      color: #D1D1D6;
+      background: #111114;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr .8fr;
+      gap: 65px;
+      padding-bottom: 55px;
+    }
+
+    .footer-brand .brand-name {
+      color: var(--white);
+    }
+
+    .footer-brand .brand-descriptor {
+      color: #A1A1AA;
+    }
+
+    .footer-brand p {
+      max-width: 400px;
+      margin-top: 23px;
+      color: #A1A1AA;
+      font-size: 16px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 22px;
+      color: var(--white);
+      font-size: 18px;
+      letter-spacing: -.02em;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 13px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: #B5B5BC;
+      font-size: 15px;
+      transition: color .2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #FF6A70;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      padding-top: 24px;
+      border-top: 1px solid #33333A;
+      color: #A1A1AA;
+      font-size: 14px;
+    }
+
+    .footer-disclaimer {
+      max-width: 750px;
+      margin-top: 20px;
+      color: #8F8F98;
+      font-size: 14px;
+    }
+
+    /* =========================================
+       13. MOBILE CTA BAR
+    ========================================= */
+
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 11px 16px calc(11px + env(safe-area-inset-bottom));
+      background: rgba(255, 255, 255, .97);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -8px 25px rgba(24, 24, 27, .08);
+      backdrop-filter: blur(12px);
+    }
+
+    .mobile-cta .btn {
+      width: 100%;
+      min-height: 50px;
+    }
+
+    /* =========================================
+       14. RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 1050px) {
+      .main-nav {
+        gap: 17px;
+      }
+
+      .main-nav a {
+        font-size: 14px;
+      }
+
+      .hero-grid {
+        gap: 30px;
+      }
+
+      .clinic-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .intro-grid,
+      .reassurance-grid {
+        gap: 45px;
+      }
+    }
+
+    @media (max-width: 850px) {
+      :root {
+        --header-height: 72px;
+      }
+
+      .section {
+        padding: 78px 0;
+      }
+
+      .main-nav {
+        position: fixed;
+        inset: var(--header-height) 0 0;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 20px 24px 35px;
+        background: var(--white);
+        transform: translateX(100%);
+        transition: transform .25s ease;
+        overflow-y: auto;
+      }
+
+      .main-nav.is-open {
+        transform: translateX(0);
+      }
+
+      .main-nav a {
+        padding: 17px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 18px;
+      }
+
+      .header-actions .btn {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero {
+        padding: 70px 0 65px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        max-width: 720px;
+      }
+
+      .hero-visual {
+        min-height: 380px;
+      }
+
+      .hero-art {
+        width: min(78%, 390px);
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 23px;
+      }
+
+      .intro-grid,
+      .reassurance-grid,
+      .faq-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-aside {
+        max-width: 600px;
+      }
+
+      .treatment-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .journey-grid {
+        gap: 20px;
+      }
+
+      .faq-intro {
+        position: static;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+      .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+        padding-bottom: 72px;
+      }
+
+      .container {
+        width: min(100% - 36px, var(--container));
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 32px;
+      }
+
+      .section-heading p {
+        font-size: 17px;
+      }
+
+      .brand-logo {
+        width: 43px;
+        height: 43px;
+      }
+
+      .brand-name {
+        font-size: 17px;
+      }
+
+      .brand-descriptor {
+        font-size: 10px;
+      }
+
+      .hero {
+        padding: 55px 0 45px;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 11vw, 53px);
+      }
+
+      .hero-description {
+        font-size: 17px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 310px;
+      }
+
+      .hero-art {
+        width: 83%;
+      }
+
+      .floating-label {
+        padding: 11px 12px;
+        font-size: 12px;
+      }
+
+      .floating-label svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .floating-label.top {
+        right: -3%;
+      }
+
+      .floating-label.bottom {
+        left: -3%;
+      }
+
+      .trust-strip {
+        padding: 23px 0;
+      }
+
+      .trust-grid {
+        gap: 20px 12px;
+      }
+
+      .trust-item {
+        justify-content: flex-start;
+        gap: 9px;
+      }
+
+      .trust-item svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .trust-item span {
+        font-size: 13px;
+      }
+
+      .intro-aside {
+        padding: 28px;
+      }
+
+      .treatment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .treatment-item {
+        min-height: auto;
+        padding: 25px;
+      }
+
+      .journey-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .journey-step {
+        padding-top: 18px;
+      }
+
+      .journey-step::before {
+        font-size: 36px;
+        margin-bottom: 14px;
+      }
+
+      .clinic-finder {
+        padding: 19px;
+      }
+
+      .clinic-search-row {
+        flex-direction: column;
+      }
+
+      .clinic-search-row .btn {
+        width: 100%;
+      }
+
+      .clinic-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+      }
+
+      .clinic-link {
+        min-height: 51px;
+        padding: 10px;
+        font-size: 13px;
+      }
+
+      .clinic-link svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .reassurance-visual {
+        min-height: 300px;
+      }
+
+      .reassurance-visual svg {
+        width: 130px;
+        height: 130px;
+      }
+
+      .cta-band {
+        padding: 58px 0;
+      }
+
+      .cta-inner .btn {
+        width: 100%;
+      }
+
+      .faq-question {
+        font-size: 17px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .mobile-cta {
+        display: block;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+
+  <!-- Basic organisation schema. Add verified telephone/address details
+       only when confirmed for the business entity represented by this page. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Night & Day Emergency Dentist",
+    "url": "https://www.nightandday-emergencydentist.co.uk/",
+    "description": "Emergency dental care through a network of dental clinics in the UK.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="#home" aria-label="Night and Day Emergency Dentist home">
+
+        <!-- Custom SVG logo concept -->
+        <svg class="brand-logo" viewBox="0 0 64 64" role="img" aria-label="Night and Day logo">
+          <rect x="1" y="1" width="62" height="62" rx="17" fill="#18181B"/>
+
+          <path
+            d="M15 45V19L31 39V19"
+            fill="none"
+            stroke="#FFFFFF"
+            stroke-width="5.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+
+          <path
+            d="M36 20H49"
+            fill="none"
+            stroke="#E31B23"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M42.5 20V45"
+            fill="none"
+            stroke="#FFFFFF"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+
+          <circle cx="49" cy="45" r="3.5" fill="#E31B23"/>
+        </svg>
+
+        <span class="brand-copy">
+          <span class="brand-name">NIGHT <span class="amp">&</span> DAY</span>
+          <span class="brand-descriptor">Emergency Dentist</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#treatments">Treatments</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#clinics">Find a Clinic</a>
+        <a href="#why-us">Why Choose Us</a>
+        <a href="#faqs">FAQs</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary" href="#clinics">
+          Find a Clinic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mainNav"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main id="home">
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <div class="hero-label">
+            <span class="status-dot"></span>
+            Emergency dental care across the UK
+          </div>
+
+          <h1>
+            Dental pain can't wait.
+            <span>Find the care you need.</span>
+          </h1>
+
+          <p class="hero-description">
+            Toothache, a broken tooth or another unexpected dental problem?
+            Find an emergency dental clinic near you and take the next step
+            towards getting the care you need.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#clinics">
+              Find Your Nearest Clinic
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+
+            <a class="btn btn-outline" href="#treatments">
+              Explore Emergency Treatments
+            </a>
+          </div>
+
+          <p class="hero-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            Clinic opening hours and appointment availability vary by location.
+            Please check with your selected clinic.
+          </p>
+
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+
+          <div class="hero-art">
+
+            <svg class="hero-tooth" viewBox="0 0 300 340" fill="none">
+              <defs>
+                <linearGradient id="toothGradient" x1="60" y1="30" x2="250" y2="310" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFFFFF"/>
+                  <stop offset="1" stop-color="#E8E8ED"/>
+                </linearGradient>
+
+                <linearGradient id="toothShade" x1="90" y1="70" x2="210" y2="300" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFFFFF"/>
+                  <stop offset="1" stop-color="#D9D9E0"/>
+                </linearGradient>
+              </defs>
+
+              <path
+                d="M150 37
+                  C112 37 78 17 49 43
+                  C19 70 29 125 45 172
+                  C58 211 77 303 110 307
+                  C135 311 133 244 151 218
+                  C169 244 166 311 192 307
+                  C225 303 242 211 256 172
+                  C272 125 281 70 251 43
+                  C222 17 188 37 150 37Z"
+                fill="url(#toothGradient)"
+                stroke="#C9C9D1"
+                stroke-width="5"
+              />
+
+              <path
+                d="M150 65
+                  C115 65 85 51 65 68
+                  C48 83 54 124 67 162
+                  C79 198 93 248 109 270
+                  C117 239 129 198 151 181
+                  C173 198 185 239 193 270
+                  C209 248 222 198 234 162
+                  C247 124 253 83 236 68
+                  C216 51 185 65 150 65Z"
+                fill="url(#toothShade)"
+                opacity=".75"
+              />
+
+              <path
+                d="M103 92C119 81 132 82 144 88"
+                stroke="#FFFFFF"
+                stroke-width="9"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M150 18V2M36 87 18 77M264 87l18-10"
+                stroke="#E31B23"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M226 230l12 12 24-27"
+                stroke="#E31B23"
+                stroke-width="9"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+          </div>
+
+          <div class="floating-label top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 7v5l3 2"/>
+            </svg>
+            Emergency appointments
+          </div>
+
+          <div class="floating-label bottom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+            Clinics across the UK
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         TRUST STRIP
+    ========================================== -->
+
+    <section class="trust-strip" aria-label="Service information">
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+          <span>Emergency dental care</span>
+        </div>
+
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 11.5 12 4l9 7.5"/>
+            <path d="M5 10v10h14V10M9 20v-6h6v6"/>
+          </svg>
+          <span>Multiple UK clinic locations</span>
+        </div>
+
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 2"/>
+          </svg>
+          <span>Appointment options vary by clinic</span>
+        </div>
+
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+            <path d="M8 12h8M12 8v8"/>
+          </svg>
+          <span>Help with urgent dental problems</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         INTRODUCTION
+    ========================================== -->
+
+    <section class="section">
+      <div class="container intro-grid">
+
+        <div class="intro-copy">
+          <span class="eyebrow">When dental problems happen</span>
+
+          <h2>
+            Don't let dental pain
+            <span class="text-red">take over your day.</span>
+          </h2>
+
+          <p>
+            Dental emergencies can happen unexpectedly. A sudden toothache,
+            damaged tooth or painful swelling can make everyday activities
+            difficult and leave you unsure about what to do next.
+          </p>
+
+          <p>
+            Night & Day Emergency Dentist helps patients find emergency
+            dental care through its network of clinics. Explore the treatments
+            available and find a location to discuss your symptoms and
+            appointment options.
+          </p>
+
+          <a class="btn btn-primary" href="#clinics">
+            Find a Clinic Near You
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+        </div>
+
+        <aside class="intro-aside">
+          <h3>Not sure whether you need emergency dental care?</h3>
+
+          <p>
+            If you have severe dental pain, swelling, a broken tooth or another
+            urgent dental concern, contact a dental clinic for advice about
+            the appropriate next step.
+          </p>
+
+          <p>
+            If you have difficulty breathing or swallowing, rapidly spreading
+            swelling, or another potentially life-threatening emergency,
+            seek immediate emergency medical help.
+          </p>
+
+          <a class="btn btn-primary" href="#faqs">
+            Read Emergency FAQs
+          </a>
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         TREATMENTS
+    ========================================== -->
+
+    <section class="section treatments" id="treatments">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Emergency dental treatments</span>
+
+          <h2>
+            Help for unexpected
+            <span class="text-red">dental problems.</span>
+          </h2>
+
+          <p>
+            Explore common dental emergencies and the types of treatment
+            that may be considered following an assessment by a dentist.
+          </p>
+        </div>
+
+        <div class="treatment-grid">
+
+          <article class="treatment-item">
+            <div class="treatment-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 3v4M12 17v4M4.2 7.2l2.8 2.8m10 4 2.8 2.8M3 12h4m10 0h4"/>
+                <circle cx="12" cy="12" r="5"/>
+              </svg>
+            </div>
+
+            <h3>Severe Toothache</h3>
+
+            <p>
+              Persistent or severe tooth pain can have several causes.
+              An examination can help identify the source and appropriate
+              treatment options.
+            </p>
+
+            <a class="treatment-link" href="#clinics">
+              Find a clinic
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </article>
+
+
+          <article class="treatment-item">
+            <div class="treatment-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 3c-3.5 0-6 2.5-6 6 0 2.2 1 4 2 5.5 1 1.5 1 4.5 2.5 4.5 1 0 1-3 1.5-4 0 1 1 4 2 4 1.5 0 1.5-3 2.5-4.5 1-1.5 2-3.3 2-5.5 0-3.5-2.5-6-6-6Z"/>
+                <path d="M12 7v5m-2.5-2.5h5"/>
+              </svg>
+            </div>
+
+            <h3>Dental Abscess</h3>
+
+            <p>
+              Dental swelling, tenderness or a suspected abscess should be
+              assessed promptly by a dental professional.
+            </p>
+
+            <a class="treatment-link" href="#clinics">
+              Find a clinic
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </article>
+
+
+          <article class="treatment-item">
+            <div class="treatment-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M7 3h10l-2 7 3 11H6l3-11-2-7Z"/>
+                <path d="m12 4-2 5 3 2-2 4"/>
+              </svg>
+            </div>
+
+            <h3>Broken or Chipped Tooth</h3>
+
+            <p>
+              A broken or chipped tooth may need prompt assessment to
+              determine the extent of the damage and suitable care.
+            </p>
+
+            <a class="treatment-link" href="#clinics">
+              Find a clinic
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </article>
+
+
+          <article class="treatment-item">
+            <div class="treatment-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M5 7h14v12H5z"/>
+                <path d="M8 7V5h8v2M8 12h8M8 15h5"/>
+              </svg>
+            </div>
+
+            <h3>Lost Filling or Crown</h3>
+
+            <p>
+              A missing filling or crown can leave a tooth sensitive or
+              vulnerable. A dentist can assess the tooth and discuss
+              replacement or repair.
+            </p>
+
+            <a class="treatment-link" href="#clinics">
+              Find a clinic
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </article>
+
+
+          <article class="treatment-item">
+            <div class="treatment-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 3c-3.5 0-6 2.5-6 6 0 2.2 1 4 2 5.5 1 1.5 1 4.5 2.5 4.5 1 0 1-3 1.5-4 0 1 1 4 2 4 1.5 0 1.5-3 2.5-4.5 1-1.5 2-3.3 2-5.5 0-3.5-2.5-6-6-6Z"/>
+                <path d="M9 9h6"/>
+              </svg>
+            </div>
+
+            <h3>Wisdom Tooth Pain</h3>
+
+            <p>
+              Pain around a wisdom tooth may be linked to inflammation,
+              infection or other dental concerns that need assessment.
+            </p>
+
+            <a class="treatment-link" href="#clinics">
+              Find a clinic
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </article>
+
+
+          <article class="treatment-item">
+            <div class="treatment-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 3c-3.5 0-6 2.5-6 6 0 2.2 1 4 2 5.5 1 1.5 1 4.5 2.5 4.5 1 0 1-3 1.5-4 0 1 1 4 2 4 1.5 0 1.5-3 2.5-4.5 1-1.5 2-3.3 2-5.5 0-3.5-2.5-6-6-6Z"/>
+                <path d="M12 8v6m-3-3h6"/>
+              </svg>
+            </div>
+
+            <h3>Emergency Extraction</h3>
+
+            <p>
+              When a tooth cannot be restored or another clinical reason
+              requires it, extraction may be considered after assessment.
+            </p>
+
+            <a class="treatment-link" href="#clinics">
+              Find a clinic
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         HOW IT WORKS
+    ========================================== -->
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Your next steps</span>
+
+          <h2>
+            Finding emergency dental care
+            <span class="text-red">made clearer.</span>
+          </h2>
+
+          <p>
+            Start by finding a suitable clinic, then contact the location
+            to discuss your symptoms and appointment availability.
+          </p>
+        </div>
+
+        <div class="journey-grid">
+
+          <article class="journey-step">
+            <h3>Find a nearby clinic</h3>
+            <p>
+              Explore the listed locations and choose a clinic that is
+              convenient for you.
+            </p>
+          </article>
+
+          <article class="journey-step">
+            <h3>Discuss your symptoms</h3>
+            <p>
+              Contact the selected clinic to explain your dental problem
+              and ask about available appointment options.
+            </p>
+          </article>
+
+          <article class="journey-step">
+            <h3>Attend your appointment</h3>
+            <p>
+              The dental team can assess your concern and explain
+              appropriate treatment options.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         CLINIC FINDER
+    ========================================== -->
+
+    <section class="section clinic-section" id="clinics">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Find your nearest location</span>
+
+          <h2>
+            Find an emergency dentist
+            <span class="text-red">near you.</span>
+          </h2>
+
+          <p>
+            Search the listed Night & Day clinic locations to find a
+            convenient starting point for your emergency dental enquiry.
+          </p>
+        </div>
+
+        <div class="clinic-finder">
+
+          <div class="clinic-search-row">
+
+            <div class="clinic-search-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="7"/>
+                <path d="m20 20-4-4"/>
+              </svg>
+
+              <input
+                class="clinic-search"
+                id="clinicSearch"
+                type="search"
+                placeholder="Enter a town or city..."
+                aria-label="Search clinic locations"
+              >
+            </div>
+
+            <a class="btn btn-primary" href="https://www.nightandday-emergencydentist.co.uk/">
+              Visit Official Website
+            </a>
+
+          </div>
+
+          <div class="clinic-grid" id="clinicGrid">
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Acton
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Birmingham
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Bournemouth
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Bradford
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Bristol
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Edinburgh
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Hull
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Leeds
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Leicester
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Liverpool
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Manchester
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Middlesbrough
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Newcastle
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Nottingham
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Preston
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Sheffield
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Southampton / Eastleigh
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Stoke-on-Trent
+            </a>
+
+            <a class="clinic-link" href="https://www.nightandday-emergencydentist.co.uk/">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              Sunderland
+            </a>
+
+          </div>
+
+          <p class="clinic-empty" id="clinicEmpty">
+            No matching location found. Please try another town or city.
+          </p>
+
+          <p class="clinic-disclaimer">
+            This list is provided as a location finder. Please use the official
+            clinic directory or contact your chosen clinic to confirm its
+            address, opening hours, available treatments and appointment times.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         WHY CHOOSE US
+    ========================================== -->
+
+    <section class="section" id="why-us">
+      <div class="container reassurance-grid">
+
+        <div class="reassurance-visual" aria-hidden="true">
+          <svg viewBox="0 0 180 180" fill="none">
+            <path
+              d="M90 14 145 35v43c0 39-23 66-55 87C58 144 35 117 35 78V35L90 14Z"
+              stroke="currentColor"
+              stroke-width="7"
+              stroke-linejoin="round"
+            />
+            <path
+              d="m63 89 18 18 38-40"
+              stroke="currentColor"
+              stroke-width="9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+
+        <div>
+          <span class="eyebrow">A clearer route to care</span>
+
+          <h2>
+            Make your next step
+            <span class="text-red">easier to understand.</span>
+          </h2>
+
+          <p>
+            When you're dealing with dental pain, clear information matters.
+            The aim is to help you understand where to look, what to ask and
+            how to take the next step towards a dental assessment.
+          </p>
+
+          <div class="reassurance-list">
+
+            <div class="reassurance-item">
+              <span class="reassurance-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="m5 12 4 4L19 6"/>
+                </svg>
+              </span>
+
+              <div>
+                <strong>Find a suitable location</strong>
+                <p>Explore the available clinic locations in one place.</p>
+              </div>
+            </div>
+
+            <div class="reassurance-item">
+              <span class="reassurance-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="m5 12 4 4L19 6"/>
+                </svg>
+              </span>
+
+              <div>
+                <strong>Understand possible treatments</strong>
+                <p>Review common dental emergencies and treatment options.</p>
+              </div>
+            </div>
+
+            <div class="reassurance-item">
+              <span class="reassurance-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="m5 12 4 4L19 6"/>
+                </svg>
+              </span>
+
+              <div>
+                <strong>Check appointment availability</strong>
+                <p>Contact your chosen clinic to discuss its current availability.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="btn btn-primary" href="#clinics" style="margin-top:30px;">
+            Explore Clinic Locations
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         CTA
+    ========================================== -->
+
+    <section class="cta-band">
+      <div class="container cta-inner">
+
+        <div>
+          <h2>Dental pain needs attention. Find your next step.</h2>
+
+          <p>
+            Explore Night & Day clinic locations and contact a suitable
+            clinic to discuss your emergency dental concern.
+          </p>
+        </div>
+
+        <a class="btn" href="#clinics">
+          Find a Clinic
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         FAQ
+    ========================================== -->
+
+    <section class="section faq-section" id="faqs">
+      <div class="container faq-layout">
+
+        <div class="faq-intro">
+          <span class="eyebrow">Helpful information</span>
+
+          <h2>
+            Emergency dentist
+            <span class="text-red">FAQs.</span>
+          </h2>
+
+          <p>
+            Find answers to common questions about emergency dental problems
+            and arranging an appointment.
+          </p>
+
+          <a class="btn btn-outline" href="#clinics" style="margin-top:25px;">
+            Find a Clinic
+          </a>
+        </div>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              What counts as a dental emergency?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Severe toothache, dental swelling, a suspected abscess,
+                a broken tooth, a lost filling or crown, and certain dental
+                injuries may require urgent dental assessment. A dentist
+                can advise on the appropriate care for your symptoms.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Can I get a same-day emergency dental appointment?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Same-day appointments may be available depending on the
+                clinic, its opening hours and appointment capacity.
+                Contact your selected location to confirm current availability.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Do I need to register before contacting a clinic?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Night & Day's website states that patients can access its
+                emergency dental service without registering with a regular
+                dentist first. Confirm the requirements with the clinic you
+                plan to attend.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              What should I do if I have a dental abscess?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Contact a dentist promptly if you suspect a dental abscess.
+                Do not attempt to drain it yourself. If swelling makes it
+                difficult to breathe or swallow, or you feel seriously unwell,
+                seek emergency medical help immediately.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Are all clinics open 24 hours a day?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Clinic opening hours and appointment availability can vary
+                by location. Do not assume every clinic is open 24 hours.
+                Check the details for your chosen clinic before travelling.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              What should I do if I break a tooth?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Contact a dental clinic for advice and assessment. If you
+                can safely locate the broken fragment, keep it clean and
+                take it with you. Avoid chewing on the damaged tooth until
+                you have received professional advice.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              How do I find my nearest Night & Day clinic?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Use the clinic finder on this page to search by town or city.
+                Then visit the official website or contact the relevant
+                location to confirm its address and appointment options.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              How much does emergency dental treatment cost?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                The cost depends on the clinic, the assessment and the
+                treatment required. Ask your chosen clinic about consultation
+                fees, treatment charges and payment arrangements before
+                proceeding.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <a class="brand" href="#home" aria-label="Night and Day Emergency Dentist home">
+
+            <!-- Matching footer SVG logo -->
+            <svg class="brand-logo" viewBox="0 0 64 64" role="img" aria-label="Night and Day logo">
+              <rect x="1" y="1" width="62" height="62" rx="17" fill="#FFFFFF"/>
+
+              <path
+                d="M15 45V19L31 39V19"
+                fill="none"
+                stroke="#18181B"
+                stroke-width="5.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+
+              <path
+                d="M36 20H49"
+                fill="none"
+                stroke="#E31B23"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+
+              <path
+                d="M42.5 20V45"
+                fill="none"
+                stroke="#18181B"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+
+              <circle cx="49" cy="45" r="3.5" fill="#E31B23"/>
+            </svg>
+
+            <span class="brand-copy">
+              <span class="brand-name">NIGHT <span class="amp">&</span> DAY</span>
+              <span class="brand-descriptor">Emergency Dentist</span>
+            </span>
+          </a>
+
+          <p>
+            Helping patients find emergency dental care through a network
+            of clinics across the UK. Explore treatment information and
+            find a location to discuss your dental concern.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+
+          <ul class="footer-links">
+            <li><a href="#treatments">Emergency Treatments</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#clinics">Find a Clinic</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+          </ul>
+        </div>
+
+
+        <div class="footer-column">
+          <h3>Useful Links</h3>
+
+          <ul class="footer-links">
+            <li>
+              <a href="https://www.nightandday-emergencydentist.co.uk/" target="_blank" rel="noopener">
+                Official Website
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.nightandday-emergencydentist.co.uk/" target="_blank" rel="noopener">
+                Clinic Information
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.nightandday-emergencydentist.co.uk/" target="_blank" rel="noopener">
+                Contact Night & Day
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+        <span>
+          © <span id="currentYear"></span> Night & Day Emergency Dentist.
+          All rights reserved.
+        </span>
+
+        <a href="#home">Back to top ↑</a>
+      </div>
+
+      <p class="footer-disclaimer">
+        This page provides general information and is not a substitute for
+        professional dental advice, diagnosis or treatment. Treatment
+        suitability, clinic opening hours, prices and appointment availability
+        must be confirmed directly with the relevant clinic. In a life-threatening
+        emergency, call 999.
+      </p>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================
+       MOBILE CTA
+  ========================================== -->
+
+  <div class="mobile-cta">
+    <a class="btn btn-primary" href="#clinics">
+      Find an Emergency Dentist
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </svg>
+    </a>
+  </div>
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      /* -----------------------------------------
+         MOBILE NAVIGATION
+      ----------------------------------------- */
+
+      const menuToggle = document.getElementById("menuToggle");
+      const mainNav = document.getElementById("mainNav");
+      const navLinks = mainNav.querySelectorAll("a");
+
+      function closeMenu() {
+        mainNav.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+      }
+
+      menuToggle.addEventListener("click", function () {
+        const isOpen = mainNav.classList.toggle("is-open");
+
+        document.body.classList.toggle("menu-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+      });
+
+      navLinks.forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 850) {
+          closeMenu();
+        }
+      });
+
+
+      /* -----------------------------------------
+         CLINIC SEARCH
+      ----------------------------------------- */
+
+      const clinicSearch = document.getElementById("clinicSearch");
+      const clinicGrid = document.getElementById("clinicGrid");
+      const clinicLinks = clinicGrid.querySelectorAll(".clinic-link");
+      const clinicEmpty = document.getElementById("clinicEmpty");
+
+      clinicSearch.addEventListener("input", function () {
+        const searchTerm = clinicSearch.value
+          .toLowerCase()
+          .trim();
+
+        let visibleCount = 0;
+
+        clinicLinks.forEach(function (clinic) {
+          const clinicName = clinic.textContent
+            .toLowerCase()
+            .trim();
+
+          const matches = clinicName.includes(searchTerm);
+
+          clinic.style.display = matches ? "flex" : "none";
+
+          if (matches) {
+            visibleCount++;
+          }
+        });
+
+        clinicEmpty.style.display =
+          visibleCount === 0 ? "block" : "none";
+      });
+
+
+      /* -----------------------------------------
+         FAQ ACCORDION
+      ----------------------------------------- */
+
+      const faqButtons = document.querySelectorAll(".faq-question");
+
+      faqButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          const answer = button.nextElementSibling;
+          const isExpanded =
+            button.getAttribute("aria-expanded") === "true";
+
+          button.setAttribute("aria-expanded", String(!isExpanded));
+          answer.classList.toggle("is-open", !isExpanded);
+        });
+      });
+
+
+      /* -----------------------------------------
+         CURRENT YEAR
+      ----------------------------------------- */
+
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+    });
+  </script>
+
+</body>
+</html>
